@@ -6,7 +6,7 @@
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL #Let m=NULL
     set <- function(y){
-        x <<- y #x=y,m=NULL after set(y)
+        x <<- y  #x=y,m=NULL after set(y)
         m <<- NULL
     }
     get <- function() x
@@ -26,7 +26,7 @@ cacheSolve <- function(x, ...) {
         return(m)
     }
     data <- x$get()
-    m <- mean(data,...)
+    m <- solve(data,...)
     x$setmean(m)
     m
 }
